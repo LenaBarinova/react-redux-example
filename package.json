@@ -1,0 +1,53 @@
+{
+  "name": "react-flux-example",
+  "version": "1.0.0",
+  "description": "An easy example how to get started with React and Flux form multilingual websites.",
+  "main": "app.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JelenaBarinova/react-flux-example.git"
+  },
+  "keywords": [
+    "react;",
+    "flux;",
+    "mocha;",
+    "gulp;"
+  ],
+  "author": "Lena Barinova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JelenaBarinova/react-flux-example/issues"
+  },
+  "homepage": "https://github.com/JelenaBarinova/react-flux-example#readme",
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "chai": "^3.4.1",
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-envify": "^1.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-uglify": "^1.5.1",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.3",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "flux": "^2.1.1",
+    "keymirror": "^0.1.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}

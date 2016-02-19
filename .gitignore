@@ -1,0 +1,21 @@
+# Generated output
+dist/
+app.js
+
+# iOS sys file
+.DS_Store
+
+# Visual Studio Code files
+.settings/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directory
+node_modules
+
