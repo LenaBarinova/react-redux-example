@@ -7,18 +7,24 @@ var babel = require('babel-core/register');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var del = require('del');
+var envify = require('loose-envify/custom');
 
 gulp.task('build', ['copy-files'], function () {
   return browserify({
     extensions: ['.jsx', '.js'],
     entries: './src/app.jsx',
-  })
-    .transform(babelify.configure({ ignore: /(node_modules)/ }))
+    })
+    .transform(babelify.configure({
+      ignore: /(node_modules)/
+    }))
+    .transform(
+      envify({
+        _: 'purge', NODE_ENV: 'production'
+      }), { global: true })
     .bundle()
     .on("error", function (err) { console.log("Error : " + err.message); })
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(plug.envify(['production']))
     .pipe(plug.uglify())
     .pipe(gulp.dest('./dist/'));
 });
