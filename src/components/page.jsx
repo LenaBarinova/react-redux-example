@@ -10,9 +10,11 @@ let About = require('./about');
 let actions = require('./../actions');
 
 let Page = React.createClass ({
+
   render() {
     const content = this.props.content;
     const switchLanguage = this.props.switchLanguage;
+
     if (content) {
       return (
         <div>

@@ -2,11 +2,11 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const createStore = require('redux').createStore;
 const Provider = require('react-redux').Provider;
+const createStore = require('redux').createStore;
 
-const content = require('./reducer');
 const Page = require('./components/page');
+const content = require('./reducer');
 
 const store = createStore(content);
 

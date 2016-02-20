@@ -1,15 +1,20 @@
-const ACTION_TYPES = require('./action-types');
+const action_types = require('./action-types');
 const api = require('./api');
 
-
-let reducer = function(state = {}, action) {
+let reducer = function (state = {}, action) {
   switch (action.type) {
-    case ACTION_TYPES.INIT_APP:
-      return {content: api.getContent()};
-    case ACTION_TYPES.SWITCH_LANGUAGE:
-      return {content: api.getContent(action.language)};
+    case action_types.INIT_APP:
+      return {
+        content: api.getContent()
+      };
+    case action_types.SWITCH_LANGUAGE:
+      return {
+        content: api.getContent(action.language)
+      };
     default:
-      return {content: api.getContent()};
+      return {
+        content: api.getContent()
+      };
   }
 }
 
