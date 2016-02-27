@@ -1,12 +1,12 @@
 const action_types = require('./action-types');
 const api = require('./api');
 
-let reducer = function (state = {}, action) {
+const initialState = {
+  content: api.getContent() // Loads default language content (en) as an initial state
+};
+
+let reducer = function (state = initialState, action) {
   switch (action.type) {
-    case action_types.INIT_APP:
-      return {
-        content: api.getContent()
-      };
     case action_types.SWITCH_LANGUAGE:
       return {
         content: api.getContent(action.language)
@@ -16,6 +16,6 @@ let reducer = function (state = {}, action) {
         content: api.getContent()
       };
   }
-}
+};
 
 module.exports = reducer;

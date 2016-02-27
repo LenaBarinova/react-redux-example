@@ -8,9 +8,3 @@ export function switchLanguage(language) {
     language
   }
 }
-
-export function initApp() {
-  return {
-    type: action_types.INIT_APP
-  }
-}
