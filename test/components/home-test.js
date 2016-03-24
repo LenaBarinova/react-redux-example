@@ -1,3 +1,4 @@
+
 /* jshint ignore:start */
 "use strict";
 
@@ -7,9 +8,9 @@ var expect = require('chai').expect;
 var React = require('react');
 var ReactTestUtils = require('react-addons-test-utils');
 
-var Page = require('../../src/components/page');
+var Home = require('../../src/components/home');
 
-describe('Testing Page component', function() {
+describe('Testing Home component', function() {
 
 	var _content = {};
 
@@ -29,7 +30,10 @@ describe('Testing Page component', function() {
         },
         "about": {
           "header": "About the solution",
+          "subheader": "Technological stack",
           "text": "This Website is created using React version 1.14. Using Flux as a pattern for dealing with changes.",
+          "forMore": "For more, visit",
+          "url": "url",
           "goUp": "Go up"
         }
       }
@@ -37,13 +41,12 @@ describe('Testing Page component', function() {
 
   });
 
-  it('Page component has 2 children when given content', function() {
+  it('Rendered correct component', function() {
 
     const renderer = ReactTestUtils.createRenderer();
-		renderer.render(<Page data = {_content} />);
+		renderer.render(<Home data = {_content.page.home} />);
 		const renderedTree = renderer.getRenderOutput();
-    //console.log(renderedTree);
-		expect(renderedTree.props.children).to.have.length(2);
+		expect(renderedTree.props.children.props.children).to.have.length(3);
   });
 
 });

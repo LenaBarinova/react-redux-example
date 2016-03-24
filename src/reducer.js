@@ -12,9 +12,7 @@ let reducer = function (state = initialState, action) {
         content: api.getContent(action.language)
       };
     default:
-      return {
-        content: api.getContent()
-      };
+      return state;
   }
 };
 
