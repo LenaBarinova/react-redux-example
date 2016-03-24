@@ -1,7 +1,3 @@
-# Generated output
-dist/
-app.js
-
 # iOS sys file
 .DS_Store
 
